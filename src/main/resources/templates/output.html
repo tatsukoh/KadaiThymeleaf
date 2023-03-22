@@ -5,11 +5,11 @@
     <title>Thymeleaf課題</title>
 </head>
 <body>
-    <h1 th:text="#{content.title}">Thymeleaf課題</h1>
+    <h1 th:text="#{content.title}"></h1>
     <h2 th:text="#{content.message}"></h2>
     <p th:text="#{content.info}"></p>
     <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
 
-    <p><a th:href="@{/input/(previous=${[val]})}">入力画面に戻る</a></p>
+    <p><a th:href="@{/input/(previous=${[val]})}" th:text="#{content.info.return}"></a></p>
 </body>
 </html>
